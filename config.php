@@ -24,9 +24,16 @@ endif;
     <form method="post">
         <table class="form-table">
             <tbody>
-                <tr class="user-user-login-wrap">
-                    <th><label for="user_login">Chave</label></th>
-                    <td><input type="checkbox" name="status" value="<?= $status ?>" /></td>
+                <tr id="switcher-wrap">
+                    <th><label for="user_login">On/Off</label></th>
+                    <td>                        
+                        <div id="switcher-wrap">
+                            <label class="switch">
+                                <input type="checkbox" name="status" <?= ($status == 'on')?'checked="checked"':''; ?> />
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+                    </td>
                 </tr>
 
                 <tr class="period-date-wrap">
