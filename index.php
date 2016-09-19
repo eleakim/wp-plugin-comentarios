@@ -15,6 +15,6 @@ define('COMPER_BASEPATH', plugin_dir_path(__FILE__));
 require_once COMPER_BASEPATH . 'class.ComentariosPeriodo.php';
 
 
-add_action('admin_menu', array('ComentariosPeriodo','admin_menu'));
+add_action('admin_menu', array('ComentariosPeriodo', 'admin_menu'));
 add_shortcode('comments_by_period', array('ComentariosPeriodo', 'shortcode'));
 

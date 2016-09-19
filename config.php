@@ -1,19 +1,18 @@
-<?php 
-
+<?php
 $configfile = COMPER_BASEPATH . 'config.json';
 
 $status = 'on';
 $data_ini = '';
 $data_end = '';
 
-if(file_exists($configfile)):
+if (file_exists($configfile)):
     $filecontent = file_get_contents($configfile);
     $config = json_decode($filecontent);
-    
+
     $status = $config->status;
     $data_ini = $config->data_ini;
     $data_end = $config->data_end;
-endif;    
+endif;
 ?>
 
 <div class="wrap">
